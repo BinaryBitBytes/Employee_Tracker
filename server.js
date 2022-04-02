@@ -32,8 +32,21 @@ const db = mysql.createConnection(
     },
     console.log('Connected to the employees database.')
 );
+//! Adding inquirer prompt
+inquirer
+    .prompt([
+        (Main ={
+            type: "list",
+            message: "What Would you like to do? (Use arrow Keys)",
+            choices:["View All Employees","Add Employee", "Update Employee Role", "View All Roles", "Add Role","View All Departments", "Add Department","Quit"],
+        },
+        {
+
+        })
+    ]);
 
 
+//!
 db.query('If errors in databases they will be deleted', (error,result) => {
     if (error) {
         console.log(error);
