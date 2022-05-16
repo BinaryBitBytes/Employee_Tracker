@@ -1,23 +1,23 @@
-INSERT INTO department (dept_label)
-VALUES ("Management"), 
-    ("Finance"),
-    ("Operations"),
-    ("Information Technology"),
-    ("Administration"),
-    ("Transportation")
+INSERT INTO department (department_id, dept_label)
+VALUES (1, "Finance"),
+    (2, "Operations"),
+    (3, "Information Technology"),
+    (4, "Administration"),
+    (5, "Transportation"),
+    (6, "Management");
 
-INSERT INTO roles (department_id, jobTitle)
-VALUES ("Manager"),
-    (1, "Accountant"),
+INSERT INTO roles (role_id, jobTitle)
+VALUES (1, "Accountant"),
     (2, "Plant Operator"),
     (3, "Desktop Support Specialist"),
     (4, "Front Desk Admin"),
-    (5, "Dispatcher")
+    (5, "Dispatcher"),
+    (6, "Manager");
 
-INSERT INTO employees (employee)
-VALUES ("Rick Flare"),
-    ("Doug Funny"),
-    ("Alice Wonderland"),
-    ("Billiam Klinton"),
-    ("Linda Hand")
+INSERT INTO employee (employee_id, employee_name)
+VALUES (1, "Doug Funny"),
+    (2, "Alice Wonderland"),
+    (3, "Billiam Klinton"),
+    (4, "Linda Hand"),
+    (5, "Rick Flare");
 

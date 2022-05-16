@@ -1,18 +1,24 @@
-DROP DATABASE IF EXISTS Company_db;/*department_db, roles_db, employees_db;*/
-CREATE DATABASE Company_db;/*department_db, roles_db, employees_db;*/
+DROP DATABASE IF EXISTS Employee_db;/*department_db, roles_db, employees_db;*/
+CREATE DATABASE Employee_db;/*department_db, roles_db, employees_db;*/
 
-USE Company_db;/*department_db, roles_db, employees_db;*/
+USE Employee_db;/*department_db, roles_db, employees_db;*/
 
 CREATE TABLE department (
-    id PRIMARY KEY INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(18) NOT NULL
-)
+    department_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    dept_label VARCHAR(40) NOT NULL
+);
 
 CREATE TABLE roles (
-    id PRIMARY KEY INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR (18) NOT NULL
-)
+    role_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    jobTitle VARCHAR (40) NOT NULL
+);
 
 CREATE TABLE employee (
-    id PRIMARY KEY INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR (22) NOT NULL
+    employee_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    role_id int,
+    /*department_id INT,*/
+    employee_name TEXT NOT NULL,
+    FOREIGN KEY (department_id)
+    REFERENCES roles(role_id)
+    ON DELETE SET NULL
+);
