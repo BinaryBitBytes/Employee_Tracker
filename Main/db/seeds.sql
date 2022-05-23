@@ -1,10 +1,16 @@
-INSERT INTO department (department_id, dept_label)
-VALUES (1, "Finance"),
-    (2, "Operations"),
-    (3, "Information Technology"),
-    (4, "Administration"),
-    (5, "Transportation"),
-    (6, "Management");
+INSERT INTO department (dept_label)
+VALUES ("Finance"),
+    ("Operations"),
+    ("Information Technology"),
+    ("Administration"),
+    ("Transportation"),
+    ("Management");
+    -- (1, "Finance"),
+    -- (2, "Operations"),
+    -- (3, "Information Technology"),
+    -- (4, "Administration"),
+    -- (5, "Transportation"),
+    -- (6, "Management");
 
 INSERT INTO roles (role_id, jobTitle)
 VALUES (1, "Accountant"),

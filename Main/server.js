@@ -1,12 +1,10 @@
 const express = require('express'); //importing the express package
 const mysql = require('mysql2'); //importing mysql2 package
 const inquirer = require('inquirer'); //importing the inquirer package
-
 const PORT = process.env.PORT || 3001; //using port 3001 for the service
 const app = express(); //using express as the middleware
-
 //using express to import json for middleware
-app.use(express.urlencoded({ extended: false }));
+//app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //connecting to all 3 of my databases on localhost
@@ -18,20 +16,20 @@ const db = mysql.createConnection(
         database: 'Employee_db' //Employee database
     },
     console.log('Connected to the department database.'),
-    {
-        host: 'localhost',
-        user: 'root',
-        password: '1qwerty6',
-        database: 'roles_db' //roles database
-    },
-    console.log('Connected to the roles database.'),
-    {
-        host: 'localhost',
-        user: 'root',
-        password: '1qwerty6',
-        database: 'Employee_db' //employees database
-    },
-    console.log('Connected to the employees database.')
+    // {
+    //     host: 'localhost',
+    //     user: 'root',
+    //     password: '1qwerty6',
+    //     database: 'roles_db' //roles database
+    // },
+    // console.log('Connected to the roles database.'),
+    // {
+    //     host: 'localhost',
+    //     user: 'root',
+    //     password: '1qwerty6',
+    //     database: 'Employee_db' //employees database
+    // },
+    // console.log('Connected to the employees database.')
 );
 //! routes
 // Create a employee
