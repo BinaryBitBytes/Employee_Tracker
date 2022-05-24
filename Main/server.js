@@ -3,8 +3,6 @@ const mysql = require('mysql2'); //importing mysql2 package
 const inquirer = require('inquirer'); //importing the inquirer package
 const PORT = process.env.PORT || 3001; //using port 3001 for the service
 const app = express(); //using express as the middleware
-//using express to import json for middleware
-//app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //connecting to all 3 of my databases on localhost

@@ -1,3 +1,4 @@
+USE Employee_db;
 INSERT INTO department (dept_label)
 VALUES ("Finance"),
     ("Operations"),
