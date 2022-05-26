@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS Employee_db;/*department_db, roles_db, employees_db;*/
 CREATE DATABASE Employee_db;/*department_db, roles_db, employees_db;*/
 USE Employee_db;/*department_db, roles_db, employees_db;*/
 CREATE TABLE employee (
-    id INT NOT NULL,
+    id INT NOT NULL AUTO_INCREMENT,
     -- employee_id INT AUTO_INCREMENT PRIMARY KEY,
     role_id INT,
     employee_name TEXT NOT NULL,

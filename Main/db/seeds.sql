@@ -21,7 +21,7 @@ VALUES (1, "Accountant"),
     (5, "Dispatcher"),
     (6, "Manager");
 
-INSERT INTO employee (employee_id, employee_name)
+INSERT INTO employee (role_id, employee_name)
 VALUES (1, "Doug Funny"),
     (2, "Alice Wonderland"),
     (3, "Billiam Klinton"),
