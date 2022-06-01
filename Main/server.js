@@ -14,22 +14,17 @@ const db = mysql.createConnection(
         database: 'Employee_db' //Employee database
     },
     console.log('Connected to the department database.'),
-    // {
-    //     host: 'localhost',
-    //     user: 'root',
-    //     password: '1qwerty6',
-    //     database: 'roles_db' //roles database
-    // },
-    // console.log('Connected to the roles database.'),
-    // {
-    //     host: 'localhost',
-    //     user: 'root',
-    //     password: '1qwerty6',
-    //     database: 'Employee_db' //employees database
-    // },
-    // console.log('Connected to the employees database.')
 );
-//! routes
+
+db.query('SELECT * FROM department', function (err, results){
+  console.log(results);
+});
+db.query('SELECT * FROM employee', function (err, results){
+  console.log(results);
+});
+db.query('SELECT * FROM roles', function (err, results){
+  console.log(results);
+});
 // Create a employee
 app.post('/api/new-employee', ({ body }, res) => {
     const sql = `INSERT INTO employee (employee_name)
@@ -132,21 +127,3 @@ app.post('/api/new-employee', ({ body }, res) => {
     console.log(`Server running on port ${PORT}`);
   });
   
-
-
-//! Adding inquirer prompt
-
-// inquirer
-//     .prompt([
-//         (Main ={
-//             type: "list",
-//             message: "What Would you like to do? (Use arrow Keys)",
-//             choices:["View All Employees","Add Employee", "Update Employee Role", "View All Roles", "Add Role","View All Departments", "Add Department","Quit"],
-//         },
-//         {
-
-//         })
-//     ]); 
-
-
-//!
